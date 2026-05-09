@@ -532,3 +532,118 @@ section{
         grid-template-columns:1fr;
     }
 }
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.custom-footer{
+    width:100%;
+    background:#16142b;
+    color:white;
+    margin-top:80px;
+}
+
+
+.footer-top{
+    padding:45px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.footer-top ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.footer-top li{
+    position:relative;
+    padding-right:35px;
+}
+
+.footer-top li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:20px;
+    background:#3b3950;
+}
+
+.footer-top a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:.3s;
+}
+
+.footer-top a:hover{
+    opacity:.7;
+}
+
+.custom-footer hr{
+    border:none;
+    height:1px;
+    background:#2b2940;
+    width:98%;
+    margin:auto;
+}
+
+.footer-bottom{
+    min-height:120px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.copyright,
+.credits{
+    color:#6f6d7f;
+    font-size:14px;
+    font-weight:600;
+}
+
+
+.redesSociales{
+    display:flex;
+    gap:28px;
+}
+
+.redesSociales a{
+    color:#6f6d7f;
+    font-size:18px;
+    transition:.3s;
+}
+
+.redesSociales a:hover{
+    color:white;
+}
+
+
+@media(max-width:900px){
+
+    .footer-top ul{
+        justify-content:center;
+        gap:20px;
+    }
+
+    .footer-top li{
+        padding-right:20px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+        padding:30px 20px;
+    }
+}
